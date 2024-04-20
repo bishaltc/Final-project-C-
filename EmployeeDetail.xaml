@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeManagementSystem.EmployeeDetail"
+             Title="Employee Detail">
+
+    <StackLayout Padding="20">
+        <Label Text="Name" />
+        <Entry Text="{Binding SelectedEmployee.Name}" />
+
+        <Label Text="Position" />
+        <Entry Text="{Binding SelectedEmployee.Position}" />
+
+        <Label Text="Rating" />
+        <Entry Text="{Binding SelectedEmployee.Rating}" />
+
+        <Label Text="Email" />
+        <Entry Text="{Binding SelectedEmployee.Email}" />
+
+        <Button Text="Save Changes" Clicked="SaveChanges_Clicked" />
+    </StackLayout>
+
+</ContentPage>

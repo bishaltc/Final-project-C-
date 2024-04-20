@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeManagementSystem.HighestRatedEmployees"
+             Title="Highest Rated Employees">
+    
+    <StackLayout Padding="20">
+        <Label Text="Number of Employees to Display" />
+        <Entry x:Name="countEntry" Placeholder="Enter count" Keyboard="Numeric" />
+
+        <Button Text="Show Highest Rated Employees" Clicked="ShowHighestRatedEmployees_Clicked" />
+
+        <Label Text="Highest Rated Employees" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,20,0,10" />
+        <ListView x:Name="highestRatedListView"
+              ItemsSource="{Binding HighestRatedEmployees}"
+              VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Name}" FontSize="Medium" />
+                            <Label Text="{Binding Position}" FontSize="Small" />
+                            <Label Text="{Binding Rating}" FontSize="Small" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+
+</ContentPage>
